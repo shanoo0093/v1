@@ -16,4 +16,5 @@ if($Account != null && $Password != null && $row[1] == $Account && $row[2] == $P
         echo '登入失敗!';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
     }
+    $con -> close();
 ?>
