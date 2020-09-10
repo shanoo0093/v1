@@ -26,7 +26,7 @@ if(isset($_POST['Submit'])){
 <title>create.php</title>
 </head>
 <body>
-<form id="form1" name="form1" method="post" action="add.php">
+<form id="form1" name="form1" method="post" action="create.php">
   <table width="800" border="1" align="center">
     <tr>
       <th>Account</th>
