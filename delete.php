@@ -1,13 +1,18 @@
 <?php
 include_once("sqlConn.php");
-$con -> select_db("my_db");
+$Account = $_POST['account'];
 
-if(isset($_GET['account']) && $_GET['account']!=""){
-    $sql=sprintf("DELETE FROM persons WHERE Account=%s", $_GET['account']);
-
-    $con -> query($sql);
-    header("location:index.php");
+if(isset['account'] != null)
+{
+        $sql = "delete from my_db where Account='$account'";
+       
+                echo '刪除成功!';
+}
+        else
+        {
+                echo '刪除失敗!';
+                echo '<meta http-equiv=REFRESH CONTENT=2;url=member.php>';
+        }
 }
 
-$con -> close();
 ?>
