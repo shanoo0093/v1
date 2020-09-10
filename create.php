@@ -1,5 +1,5 @@
 <?php
-include("mysql_connect.inc.php");
+include_once("sqlConn.php");
 $con -> select_db("my_db");
 $sql=mysql_query("SELECT * FROM my_db where Account ='%$_POST[account]%'");
 if(isset($_POST['Submit'])){
