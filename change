@@ -24,4 +24,3 @@ $row = $result -> fetch_array();
 
 $con -> close();
 ?>
-
