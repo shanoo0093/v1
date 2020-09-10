@@ -1,9 +1,13 @@
-<html>
- <head>
-  <title>首頁</title>
- </head>
- <body>
-<?php session_start(); ?>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include("mysql_connect.inc.php");
+include_once("sqlConn.php");
+$con -> select_db("my_db");
+
+if(isset($_GET['id']) && $_GET['id']!=""){
+    $sql=sprintf("DELETE FROM persons WHERE personID=%s", $_GET['id']);
+
+    $con -> query($sql);
+    header("location:index.php");
+}
+
+$con -> close();
+?>
