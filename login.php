@@ -1,8 +1,8 @@
 <?php
 include_once("sqlConn.php");
 $con -> select_db("my_db");
-$Account = $_POST['account'];
-$Password = $_POST['passwd'];
+$Account = $_GET['account'];
+$Password = $_GET['passwd'];
 $sql = mysql_query("SELECT * FROM my_db where Account = '$account'");
 $result = mysql_query($sql);
 $row = @mysql_fetch_row($result);
