@@ -7,10 +7,12 @@ if(isset($_POST['Submit'])){
         {   
         $sql=sprintf(UPDATE persons SET Account='%s', Password='%s' WHERE Password=%s", $_POST['password']);
         echo '修改成功';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=login.php>';
         }
      else
         {
         echo '修改失敗';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=change.php>';
         }
   }      
  else{
