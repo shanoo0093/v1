@@ -5,13 +5,13 @@ $sql=mysql_query("SELECT * FROM my_db where Account ='%$_POST[account]%'");
 if(isset($_POST['Submit'])){
     if($sql[1]==$Account){
         echo '帳號資料重複';
-        header("location:create.php");
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=create.php>';
                          }
     
     else{
         $sql=sprintf("INSERT INTO persons(Account, Password) VALUES('%s', '%s')", $_POST['account'], $_POST['password'];
         $con -> query($sql);
-        header("location:login.php");
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=login.php>';
         }
  else{
       echo '網頁錯誤'
